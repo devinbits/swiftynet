@@ -28,6 +28,6 @@ struct MetricRow: View {
                 .menuBarValueStyle()
                 .multilineTextAlignment(.trailing)
         }
-        .frame(height: DesignTokens.rowHeight)
+        .frame(minHeight: DesignTokens.rowHeightCompact)
     }
 }

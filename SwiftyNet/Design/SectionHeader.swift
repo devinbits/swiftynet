@@ -10,6 +10,5 @@ struct SectionHeader: View {
     var body: some View {
         Text(title)
             .sectionHeaderStyle()
-            .padding(.bottom, DesignTokens.spacingM)
     }
 }

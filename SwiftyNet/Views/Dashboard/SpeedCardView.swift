@@ -6,20 +6,28 @@ struct SpeedCardView: View {
     let monitoringEnabled: Bool
 
     var body: some View {
-        HStack(spacing: DesignTokens.spacingXL) {
-            SpeedDisplay(
-                label: "Download",
-                icon: "arrow.down",
-                bytesPerSecond: downloadSpeed,
-                monitoringEnabled: monitoringEnabled
-            )
+        VStack(alignment: .leading, spacing: DesignTokens.spacingM) {
+            HStack(spacing: DesignTokens.spacingXL) {
+                SpeedDisplay(
+                    label: "Download",
+                    icon: "arrow.down",
+                    bytesPerSecond: downloadSpeed,
+                    monitoringEnabled: monitoringEnabled
+                )
 
-            SpeedDisplay(
-                label: "Upload",
-                icon: "arrow.up",
-                bytesPerSecond: uploadSpeed,
-                monitoringEnabled: monitoringEnabled
-            )
+                SpeedDisplay(
+                    label: "Upload",
+                    icon: "arrow.up",
+                    bytesPerSecond: uploadSpeed,
+                    monitoringEnabled: monitoringEnabled
+                )
+            }
+
+            if !monitoringEnabled {
+                Text("Speeds update when monitoring is enabled.")
+                    .captionStyle()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
     }
 }

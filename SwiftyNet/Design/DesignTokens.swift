@@ -14,10 +14,12 @@ enum DesignTokens {
     static let radiusXL: CGFloat = 20
 
     static let rowHeight: CGFloat = 44
+    static let rowHeightCompact: CGFloat = 28
+    static let cardPadding: CGFloat = 12
     static let statusIndicatorSize: CGFloat = 8
     static let menuBarSpeedRowWidth: CGFloat = 240
-    static let minWindowWidth: CGFloat = 400
-    static let minWindowHeight: CGFloat = 480
+    static let minWindowWidth: CGFloat = 420
+    static let minWindowHeight: CGFloat = 580
 
     static var cardShape: RoundedRectangle {
         RoundedRectangle(cornerRadius: radiusL, style: .continuous)

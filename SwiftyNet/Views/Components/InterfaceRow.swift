@@ -2,6 +2,8 @@ import SwiftUI
 
 struct InterfaceRow: View {
     let interface: NetworkInterface
+    let showIPv6: Bool
+    let isPreferred: Bool
 
     var body: some View {
         HStack(spacing: DesignTokens.spacingS) {
@@ -12,16 +14,21 @@ struct InterfaceRow: View {
             VStack(alignment: .leading, spacing: DesignTokens.spacingXS) {
                 Text(interface.networkLabel)
                     .bodyLabelStyle()
-                Text(interface.primaryAddress ?? Formatters.placeholder)
+                Text(Formatters.address(for: interface, showIPv6: showIPv6))
                     .secondaryLabelStyle()
                     .monospacedDigit()
             }
 
             Spacer(minLength: DesignTokens.spacingM)
 
-            Text(interface.isActive ? "Active" : "Idle")
-                .captionStyle()
+            if isPreferred {
+                Text("Preferred")
+                    .captionStyle()
+            } else {
+                Text(interface.isActive ? "Active" : "Idle")
+                    .captionStyle()
+            }
         }
-        .frame(minHeight: DesignTokens.rowHeight)
+        .frame(minHeight: DesignTokens.rowHeightCompact)
     }
 }
