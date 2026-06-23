@@ -5,6 +5,7 @@ enum AppColors {
     static let statusOffline = Color.red
     static let statusLocal = Color.orange
     static let statusIdle = Color.secondary
+    static let statusMonitoringActive = Color.yellow
     static let accent = Color.accentColor
 
     static func forConnectivity(_ state: ConnectivityState) -> Color {

@@ -14,6 +14,8 @@ enum DesignTokens {
     static let radiusXL: CGFloat = 20
 
     static let rowHeight: CGFloat = 44
+    static let statusIndicatorSize: CGFloat = 8
+    static let menuBarSpeedRowWidth: CGFloat = 240
     static let minWindowWidth: CGFloat = 400
     static let minWindowHeight: CGFloat = 480
 

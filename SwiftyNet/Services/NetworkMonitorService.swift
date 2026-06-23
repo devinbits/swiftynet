@@ -27,25 +27,36 @@ final class NetworkMonitorService {
         }
     }
 
+    var monitoringStatusLabel: String {
+        isMonitoringEnabled ? "Active" : "Off"
+    }
+
     var statusIcon: String {
-        if !isMonitoringEnabled {
+        guard isMonitoringEnabled else {
             return "network"
         }
 
         switch connectivity {
         case .online:
-            if primaryInterface?.displayName.lowercased().contains("wi-fi") == true
-                || primaryInterface?.id.hasPrefix("en") == true && primaryInterface?.displayName != "Ethernet" {
-                return "wifi"
+            if isWiFiInterface(primaryInterface) {
+                return "wifi.circle.fill"
             }
             return "cable.connector"
         case .localOnly:
-            return "wifi.exclamationmark"
+            return "wifi.exclamationmark.circle.fill"
         case .offline:
             return "wifi.slash"
         case .monitoringOff:
             return "network"
         }
+    }
+
+    private func isWiFiInterface(_ interface: NetworkInterface?) -> Bool {
+        guard let interface else { return false }
+        let name = interface.displayName.lowercased()
+        return name.contains("wi-fi")
+            || name.contains("wifi")
+            || (interface.id.hasPrefix("en") && interface.displayName != "Ethernet")
     }
 
     private let preferences = MonitoringPreferences.shared
@@ -79,6 +90,8 @@ final class NetworkMonitorService {
         if let speedTimer {
             RunLoop.main.add(speedTimer, forMode: .common)
         }
+
+        sampleSpeed()
     }
 
     func refreshSnapshot() {
@@ -122,6 +135,8 @@ final class NetworkMonitorService {
         if let speedTimer {
             RunLoop.main.add(speedTimer, forMode: .common)
         }
+
+        sampleSpeed()
     }
 
     private func stopMonitoring() {
