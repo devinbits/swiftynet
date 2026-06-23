@@ -2,14 +2,22 @@ import SwiftUI
 
 struct StatusBarMenuView: View {
     @Bindable var monitor: NetworkMonitorService
-    @Bindable private var preferences = MonitoringPreferences.shared
+    private let preferences = MonitoringPreferences.shared
     @Environment(\.openWindow) private var openWindow
 
     var body: some View {
         Group {
             statusButton(
+                title: "Monitoring: \(monitor.monitoringStatusLabel)",
+                subtitle: monitor.isMonitoringEnabled ? nil : "Enable in Dashboard",
+                indicatorColor: monitor.isMonitoringEnabled ? AppColors.statusMonitoringActive : nil
+            )
+
+            statusButton(
                 title: "Connection: \(monitor.connectivity.displayName)",
-                subtitle: monitor.isMonitoringEnabled ? nil : "Enable in Dashboard"
+                indicatorColor: monitor.connectivity == .online
+                    ? AppColors.statusOnline
+                    : AppColors.statusOffline
             )
 
             statusButton(
@@ -20,8 +28,10 @@ struct StatusBarMenuView: View {
                 title: "IP: \(Formatters.address(for: monitor.primaryInterface, showIPv6: preferences.showIPv6InMenuBar))"
             )
 
-            statusButton(
-                title: "Speed: \(Formatters.speedPair(download: monitor.downloadSpeed, upload: monitor.uploadSpeed, monitoringEnabled: monitor.isMonitoringEnabled))"
+            speedStatusButton(
+                download: monitor.downloadSpeed,
+                upload: monitor.uploadSpeed,
+                monitoringEnabled: monitor.isMonitoringEnabled
             )
 
             Divider()
@@ -37,20 +47,61 @@ struct StatusBarMenuView: View {
     }
 
     @ViewBuilder
-    private func statusButton(title: String, subtitle: String? = nil) -> some View {
+    private func statusButton(
+        title: String,
+        subtitle: String? = nil,
+        indicatorColor: Color? = nil
+    ) -> some View {
         Button {
             WindowHelpers.openDashboard(openWindow: openWindow)
         } label: {
-            if let subtitle {
-                VStack(alignment: .leading, spacing: DesignTokens.spacingXS) {
-                    Text(title)
-                    Text(subtitle)
-                        .font(Typography.captionFont)
-                        .foregroundStyle(.secondary)
+            HStack(spacing: DesignTokens.spacingS) {
+                if let indicatorColor {
+                    StatusIndicator(color: indicatorColor)
                 }
-            } else {
-                Text(title)
+
+                if let subtitle {
+                    VStack(alignment: .leading, spacing: DesignTokens.spacingXS) {
+                        Text(title)
+                        Text(subtitle)
+                            .font(Typography.captionFont)
+                            .foregroundStyle(.secondary)
+                    }
+                } else {
+                    Text(title)
+                }
             }
         }
+    }
+
+    private func speedStatusButton(
+        download: Double,
+        upload: Double,
+        monitoringEnabled: Bool
+    ) -> some View {
+        Button {
+            WindowHelpers.openDashboard(openWindow: openWindow)
+        } label: {
+            Text(Formatters.menuSpeedLine(
+                download: download,
+                upload: upload,
+                monitoringEnabled: monitoringEnabled
+            ))
+            .menuBarValueStyle()
+            .frame(width: DesignTokens.menuBarSpeedRowWidth, alignment: .leading)
+        }
+    }
+}
+
+private struct StatusIndicator: View {
+    let color: Color
+
+    var body: some View {
+        Circle()
+            .fill(color)
+            .frame(
+                width: DesignTokens.statusIndicatorSize,
+                height: DesignTokens.statusIndicatorSize
+            )
     }
 }

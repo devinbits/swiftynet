@@ -13,15 +13,25 @@ enum Formatters {
     }
 
     static func speed(_ bytesPerSecond: Double, monitoringEnabled: Bool) -> String {
-        guard monitoringEnabled, bytesPerSecond >= 0 else {
+        guard monitoringEnabled else {
             return placeholder
         }
-        return "\(makeSpeedFormatter().string(fromByteCount: Int64(bytesPerSecond)))/s"
+
+        let clamped = max(0, bytesPerSecond)
+        guard clamped >= 1 else {
+            return "0 KB/s"
+        }
+
+        return "\(makeSpeedFormatter().string(fromByteCount: Int64(clamped)))/s"
     }
 
     static func speedPair(download: Double, upload: Double, monitoringEnabled: Bool) -> String {
         guard monitoringEnabled else { return placeholder }
         return "↓ \(speed(download, monitoringEnabled: true))  ↑ \(speed(upload, monitoringEnabled: true))"
+    }
+
+    static func menuSpeedLine(download: Double, upload: Double, monitoringEnabled: Bool) -> String {
+        "Speed: \(speedPair(download: download, upload: upload, monitoringEnabled: monitoringEnabled))"
     }
 
     static func address(for interface: NetworkInterface?, showIPv6: Bool) -> String {
