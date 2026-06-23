@@ -31,6 +31,17 @@ final class NetworkMonitorService {
         isMonitoringEnabled ? "Active" : "Off"
     }
 
+    private(set) var preferencesChangeToken: Int = 0
+
+    var showIPv6InMenuBar: Bool {
+        get { preferences.showIPv6InMenuBar }
+        set {
+            guard preferences.showIPv6InMenuBar != newValue else { return }
+            preferences.showIPv6InMenuBar = newValue
+            preferencesChangeToken &+= 1
+        }
+    }
+
     var statusIcon: String {
         guard isMonitoringEnabled else {
             return "network"

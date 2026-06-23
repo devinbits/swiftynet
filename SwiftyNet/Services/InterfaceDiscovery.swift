@@ -55,11 +55,19 @@ enum InterfaceDiscovery {
                     NI_NUMERICHOST
                 ) == 0 {
                     let address = String(cString: hostname)
-                    if !address.hasPrefix("fe80") {
-                        var entry = addressesByInterface[interfaceName] ?? (nil, nil)
-                        entry.ipv6 = address
-                        addressesByInterface[interfaceName] = entry
+                    let hostOnly = address.split(separator: "%").first.map(String.init) ?? address
+                    guard isUsableIPv6(hostOnly) else {
+                        pointer = current.pointee.ifa_next
+                        continue
                     }
+
+                    var entry = addressesByInterface[interfaceName] ?? (nil, nil)
+                    if let existingIPv6 = entry.ipv6 {
+                        entry.ipv6 = preferredIPv6(existingIPv6, hostOnly)
+                    } else {
+                        entry.ipv6 = hostOnly
+                    }
+                    addressesByInterface[interfaceName] = entry
                 }
             }
 
@@ -112,6 +120,20 @@ enum InterfaceDiscovery {
         }
 
         return nil
+    }
+
+    private static func isUsableIPv6(_ address: String) -> Bool {
+        !address.hasPrefix("fe80") && address != "::1"
+    }
+
+    private static func preferredIPv6(_ current: String, _ candidate: String) -> String {
+        ipv6PreferenceScore(candidate) > ipv6PreferenceScore(current) ? candidate : current
+    }
+
+    private static func ipv6PreferenceScore(_ address: String) -> Int {
+        if address.hasPrefix("fe80") || address == "::1" { return 0 }
+        if address.hasPrefix("fd") || address.hasPrefix("fc") { return 1 }
+        return 2
     }
 
     private static func localizedDisplayNames() -> [String: String] {

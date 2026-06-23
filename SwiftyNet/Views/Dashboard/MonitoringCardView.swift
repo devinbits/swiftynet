@@ -4,36 +4,32 @@ struct MonitoringCardView: View {
     @Bindable var monitor: NetworkMonitorService
 
     var body: some View {
-        VStack(alignment: .leading, spacing: DesignTokens.spacingM) {
+        let showIPv6 = monitor.showIPv6InMenuBar
+        let _ = monitor.preferencesChangeToken
+
+        VStack(alignment: .leading, spacing: DesignTokens.spacingXS) {
             HStack {
-                Text("Monitoring")
-                    .sectionHeaderStyle()
+                ConnectivityBadge(state: monitor.connectivity)
                 Spacer()
                 Toggle("Enable", isOn: $monitor.isMonitoringEnabled)
                     .toggleStyle(.switch)
                     .labelsHidden()
             }
 
-            HStack(spacing: DesignTokens.spacingS) {
-                ConnectivityBadge(state: monitor.connectivity)
+            MetricRow(
+                icon: "network",
+                label: "Network",
+                value: Formatters.networkLabel(for: monitor.primaryInterface)
+            )
 
-                if let interface = monitor.primaryInterface {
-                    Text(interface.networkLabel)
-                        .secondaryLabelStyle()
-                } else {
-                    Text(Formatters.placeholder)
-                        .secondaryLabelStyle()
-                }
-            }
-
-            if let address = monitor.primaryInterface?.primaryAddress {
-                Text(address)
-                    .metricValueStyle()
-                    .monospacedDigit()
-            } else {
-                Text(Formatters.placeholder)
-                    .metricValueStyle()
-            }
+            MetricRow(
+                icon: "number",
+                label: "IP",
+                value: Formatters.address(
+                    for: monitor.primaryInterface,
+                    showIPv6: showIPv6
+                )
+            )
 
             if !monitor.isMonitoringEnabled {
                 Text("Enable monitoring to track live speed and connection changes.")

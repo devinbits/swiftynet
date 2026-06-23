@@ -5,9 +5,13 @@ struct GlassCard<Content: View>: View {
 
     var body: some View {
         content
-            .padding(DesignTokens.spacingL)
+            .padding(DesignTokens.cardPadding)
             .frame(maxWidth: .infinity, alignment: .leading)
             .glassEffect(.regular, in: DesignTokens.cardShape)
+            .overlay {
+                DesignTokens.cardShape
+                    .strokeBorder(.primary.opacity(0.1), lineWidth: 0.5)
+            }
     }
 }
 

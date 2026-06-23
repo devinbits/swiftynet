@@ -2,10 +2,12 @@ import SwiftUI
 
 struct StatusBarMenuView: View {
     @Bindable var monitor: NetworkMonitorService
-    private let preferences = MonitoringPreferences.shared
     @Environment(\.openWindow) private var openWindow
 
     var body: some View {
+        let showIPv6 = monitor.showIPv6InMenuBar
+        let _ = monitor.preferencesChangeToken
+
         Group {
             statusButton(
                 title: "Monitoring: \(monitor.monitoringStatusLabel)",
@@ -25,7 +27,7 @@ struct StatusBarMenuView: View {
             )
 
             statusButton(
-                title: "IP: \(Formatters.address(for: monitor.primaryInterface, showIPv6: preferences.showIPv6InMenuBar))"
+                title: "IP: \(Formatters.address(for: monitor.primaryInterface, showIPv6: showIPv6))"
             )
 
             speedStatusButton(
