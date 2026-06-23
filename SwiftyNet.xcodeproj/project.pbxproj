@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* SwiftyNetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* SwiftyNetApp.swift */; };
+		A10000000000000000000002 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* DesignTokens.swift */; };
+		A10000000000000000000003 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* Typography.swift */; };
+		A10000000000000000000004 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* AppColors.swift */; };
+		A10000000000000000000005 /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* ScreenContainer.swift */; };
+		A10000000000000000000006 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* SectionHeader.swift */; };
+		A10000000000000000000007 /* GlassCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* GlassCard.swift */; };
+		A10000000000000000000008 /* ConnectivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* ConnectivityState.swift */; };
+		A10000000000000000000009 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* NetworkInterface.swift */; };
+		A1000000000000000000000A /* NetworkSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* NetworkSnapshot.swift */; };
+		A1000000000000000000000B /* MonitoringPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* MonitoringPreferences.swift */; };
+		A1000000000000000000000C /* InterfaceDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C /* InterfaceDiscovery.swift */; };
+		A1000000000000000000000D /* SpeedCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000D /* SpeedCalculator.swift */; };
+		A1000000000000000000000E /* NetworkMonitorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000E /* NetworkMonitorService.swift */; };
+		A1000000000000000000000F /* MetricRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000F /* MetricRow.swift */; };
+		A10000000000000000000010 /* SpeedDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* SpeedDisplay.swift */; };
+		A10000000000000000000011 /* ConnectivityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* ConnectivityBadge.swift */; };
+		A10000000000000000000012 /* InterfaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* InterfaceRow.swift */; };
+		A10000000000000000000013 /* MonitoringCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013 /* MonitoringCardView.swift */; };
+		A10000000000000000000014 /* SpeedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* SpeedCardView.swift */; };
+		A10000000000000000000015 /* InterfaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* InterfaceListView.swift */; };
+		A10000000000000000000016 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* DashboardView.swift */; };
+		A10000000000000000000017 /* StatusBarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017 /* StatusBarMenuView.swift */; };
+		A10000000000000000000018 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000018 /* Formatters.swift */; };
+		A10000000000000000000019 /* WindowHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000019 /* WindowHelpers.swift */; };
+		A1000000000000000000001B /* PreferencesCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001D /* PreferencesCardView.swift */; };
+		A1000000000000000000001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* SwiftyNetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyNetApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainer.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		A20000000000000000000007 /* GlassCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassCard.swift; sourceTree = "<group>"; };
+		A20000000000000000000008 /* ConnectivityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityState.swift; sourceTree = "<group>"; };
+		A20000000000000000000009 /* NetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
+		A2000000000000000000000A /* NetworkSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSnapshot.swift; sourceTree = "<group>"; };
+		A2000000000000000000000B /* MonitoringPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringPreferences.swift; sourceTree = "<group>"; };
+		A2000000000000000000000C /* InterfaceDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceDiscovery.swift; sourceTree = "<group>"; };
+		A2000000000000000000000D /* SpeedCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCalculator.swift; sourceTree = "<group>"; };
+		A2000000000000000000000E /* NetworkMonitorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorService.swift; sourceTree = "<group>"; };
+		A2000000000000000000000F /* MetricRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricRow.swift; sourceTree = "<group>"; };
+		A20000000000000000000010 /* SpeedDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedDisplay.swift; sourceTree = "<group>"; };
+		A20000000000000000000011 /* ConnectivityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityBadge.swift; sourceTree = "<group>"; };
+		A20000000000000000000012 /* InterfaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceRow.swift; sourceTree = "<group>"; };
+		A20000000000000000000013 /* MonitoringCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringCardView.swift; sourceTree = "<group>"; };
+		A20000000000000000000014 /* SpeedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCardView.swift; sourceTree = "<group>"; };
+		A20000000000000000000015 /* InterfaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceListView.swift; sourceTree = "<group>"; };
+		A20000000000000000000016 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		A20000000000000000000017 /* StatusBarMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarMenuView.swift; sourceTree = "<group>"; };
+		A20000000000000000000018 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		A20000000000000000000019 /* WindowHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowHelpers.swift; sourceTree = "<group>"; };
+		A2000000000000000000001A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2000000000000000000001B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2000000000000000000001C /* SwiftyNet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftyNet.entitlements; sourceTree = "<group>"; };
+		A2000000000000000000001D /* PreferencesCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesCardView.swift; sourceTree = "<group>"; };
+		A30000000000000000000001 /* SwiftyNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A40000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A50000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A50000000000000000000002 /* SwiftyNet */,
+				A50000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A50000000000000000000002 /* SwiftyNet */ = {
+			isa = PBXGroup;
+			children = (
+				A50000000000000000000004 /* App */,
+				A50000000000000000000005 /* Design */,
+				A50000000000000000000006 /* Models */,
+				A50000000000000000000007 /* Services */,
+				A50000000000000000000008 /* Views */,
+				A50000000000000000000009 /* Utilities */,
+				A5000000000000000000000A /* Resources */,
+				A2000000000000000000001C /* SwiftyNet.entitlements */,
+			);
+			path = SwiftyNet;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000001 /* SwiftyNet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000004 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* SwiftyNetApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000005 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000002 /* DesignTokens.swift */,
+				A20000000000000000000003 /* Typography.swift */,
+				A20000000000000000000004 /* AppColors.swift */,
+				A20000000000000000000005 /* ScreenContainer.swift */,
+				A20000000000000000000006 /* SectionHeader.swift */,
+				A20000000000000000000007 /* GlassCard.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000006 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000008 /* ConnectivityState.swift */,
+				A20000000000000000000009 /* NetworkInterface.swift */,
+				A2000000000000000000000A /* NetworkSnapshot.swift */,
+				A2000000000000000000000B /* MonitoringPreferences.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000007 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A2000000000000000000000C /* InterfaceDiscovery.swift */,
+				A2000000000000000000000D /* SpeedCalculator.swift */,
+				A2000000000000000000000E /* NetworkMonitorService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000008 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5000000000000000000000B /* StatusBar */,
+				A5000000000000000000000C /* Dashboard */,
+				A5000000000000000000000D /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000009 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000018 /* Formatters.swift */,
+				A20000000000000000000019 /* WindowHelpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A5000000000000000000000A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2000000000000000000001A /* Assets.xcassets */,
+				A2000000000000000000001B /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5000000000000000000000B /* StatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000017 /* StatusBarMenuView.swift */,
+			);
+			path = StatusBar;
+			sourceTree = "<group>";
+		};
+		A5000000000000000000000C /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000016 /* DashboardView.swift */,
+				A20000000000000000000013 /* MonitoringCardView.swift */,
+				A20000000000000000000014 /* SpeedCardView.swift */,
+				A20000000000000000000015 /* InterfaceListView.swift */,
+				A2000000000000000000001D /* PreferencesCardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A5000000000000000000000D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A2000000000000000000000F /* MetricRow.swift */,
+				A20000000000000000000010 /* SpeedDisplay.swift */,
+				A20000000000000000000011 /* ConnectivityBadge.swift */,
+				A20000000000000000000012 /* InterfaceRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A60000000000000000000001 /* SwiftyNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000000000000000000003 /* Build configuration list for PBXNativeTarget "SwiftyNet" */;
+			buildPhases = (
+				A60000000000000000000002 /* Sources */,
+				A40000000000000000000001 /* Frameworks */,
+				A60000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyNet;
+			productName = SwiftyNet;
+			productReference = A30000000000000000000001 /* SwiftyNet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A70000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					A60000000000000000000001 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = A80000000000000000000001 /* Build configuration list for PBXProject "SwiftyNet" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A50000000000000000000001;
+			productRefGroup = A50000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60000000000000000000001 /* SwiftyNet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000000000000000000001A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* SwiftyNetApp.swift in Sources */,
+				A10000000000000000000002 /* DesignTokens.swift in Sources */,
+				A10000000000000000000003 /* Typography.swift in Sources */,
+				A10000000000000000000004 /* AppColors.swift in Sources */,
+				A10000000000000000000005 /* ScreenContainer.swift in Sources */,
+				A10000000000000000000006 /* SectionHeader.swift in Sources */,
+				A10000000000000000000007 /* GlassCard.swift in Sources */,
+				A10000000000000000000008 /* ConnectivityState.swift in Sources */,
+				A10000000000000000000009 /* NetworkInterface.swift in Sources */,
+				A1000000000000000000000A /* NetworkSnapshot.swift in Sources */,
+				A1000000000000000000000B /* MonitoringPreferences.swift in Sources */,
+				A1000000000000000000000C /* InterfaceDiscovery.swift in Sources */,
+				A1000000000000000000000D /* SpeedCalculator.swift in Sources */,
+				A1000000000000000000000E /* NetworkMonitorService.swift in Sources */,
+				A1000000000000000000000F /* MetricRow.swift in Sources */,
+				A10000000000000000000010 /* SpeedDisplay.swift in Sources */,
+				A10000000000000000000011 /* ConnectivityBadge.swift in Sources */,
+				A10000000000000000000012 /* InterfaceRow.swift in Sources */,
+				A10000000000000000000013 /* MonitoringCardView.swift in Sources */,
+				A10000000000000000000014 /* SpeedCardView.swift in Sources */,
+				A10000000000000000000015 /* InterfaceListView.swift in Sources */,
+				A10000000000000000000016 /* DashboardView.swift in Sources */,
+				A10000000000000000000017 /* StatusBarMenuView.swift in Sources */,
+				A10000000000000000000018 /* Formatters.swift in Sources */,
+				A10000000000000000000019 /* WindowHelpers.swift in Sources */,
+				A1000000000000000000001B /* PreferencesCardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A90000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A90000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A90000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftyNet/SwiftyNet.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SwiftyNet/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.labs.SwiftyNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A90000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftyNet/SwiftyNet.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SwiftyNet/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.labs.SwiftyNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A80000000000000000000001 /* Build configuration list for PBXProject "SwiftyNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90000000000000000000001 /* Debug */,
+				A90000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000000000000000000003 /* Build configuration list for PBXNativeTarget "SwiftyNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90000000000000000000003 /* Debug */,
+				A90000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A70000000000000000000001 /* Project object */;
+}
